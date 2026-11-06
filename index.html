@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voz Acessível</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>🔊 Voz Acessível</h1>
+        <p>Transformando textos em voz para todos!</p>
+    </header>
+
+    <main class="container">
+
+        <h2>Escreva seu texto</h2>
+
+        <p class="descricao">
+            Digite ou cole abaixo o texto que deseja ouvir.
+        </p>
+
+        <textarea
+            id="texto"
+            aria-label="Digite o texto que deseja ouvir"
+            placeholder="Digite seu texto aqui..."
+        ></textarea>
+
+        <div class="controls">
+            <button id="btnFalar">🔊 Ouvir texto</button>
+            <button id="btnPausar">⏸ Pausar</button>
+            <button id="btnContinuar">▶ Continuar</button>
+            <button id="btnParar">⏹ Parar</button>
+            <button id="btnLimpar">🗑 Limpar</button>
+        </div>
+
+        <section class="audio">
+
+            <h3>⚙ Configurações de áudio</h3>
+
+            <div class="config">
+                <label for="voz">Escolha a voz:</label>
+                <select id="voz">
+                    <option value="">Carregando vozes...</option>
+                </select>
+            </div>
+
+            <div class="config">
+                <label for="velocidade">
+                    Velocidade:
+                    <span id="valorVelocidade">1x</span>
+                </label>
+
+                <input
+                    type="range"
+                    id="velocidade"
+                    min="0.5"
+                    max="2"
+                    step="0.1"
+                    value="1"
+                >
+            </div>
+
+            <div class="config">
+                <label for="volume">
+                    Volume:
+                    <span id="valorVolume">100%</span>
+                </label>
+
+                <input
+                    type="range"
+                    id="volume"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value="1"
+                >
+            </div>
+
+        </section>
+
+        <section class="accessibility">
+
+            <button id="btnAumentar">A+ Aumentar letras</button>
+            <button id="btnDiminuir">A- Diminuir letras</button>
+            <button id="btnContraste">◐ Alto contraste</button>
+
+        </section>
+
+        <p id="status" role="status" aria-live="polite">
+            Pronto para começar!
+        </p>
+
+    </main>
+
+    <footer>
+        <p>Voz Acessível © 2026</p>
+        <p>Tecnologia e inclusão para todos.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #172554;
+    transition: 0.3s;
+}
+
+header {
+    background: #123b70;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000015;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.descricao {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 220px;
+    padding: 18px;
+    border: 2px solid #123b70;
+    border-radius: 10px;
+    font-size: 20px;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: 3px solid #e6a700;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+button, select {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 17px;
+}
+
+button {
+    cursor: pointer;
+    background: #123b70;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #205da3;
+}
+
+button:focus-visible,
+select:focus-visible {
+    outline: 3px solid #e6a700;
+    outline-offset: 3px;
+}
+
+.audio {
+    margin-top: 25px;
+    padding: 20px;
+    background: #e8f1fc;
+    border-radius: 10px;
+}
+
+.audio h3 {
+    margin-bottom: 15px;
+}
+
+.config {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+select {
+    border: 2px solid #123b70;
+    background: white;
+    color: #172554;
+    max-width: 100%;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.accessibility {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #123b70;
+    color: white;
+    margin-top: 40px;
+}
+
+body.alto-contraste {
+    background: black;
+    color: white;
+}
+
+body.alto-contraste .container {
+    background: #111;
+    color: white;
+}
+
+body.alto-contraste .audio {
+    background: #222;
+    color: white;
+}
+
+body.alto-contraste textarea,
+body.alto-contraste select {
+    background: black;
+    color: white;
+    border: 2px solid yellow;
+}
+
+body.alto-contraste button {
+    background: #ffeb00;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .controls button,
+    .accessibility button {
+        width: 100%;
+    }
+}
